@@ -1,8 +1,9 @@
-# Copyright (c) cjadeveloper
+# Copyright (c) cjadeveloper 2019
 # Distributed under the terms of the Modified BSD License.
 
-# Based on jupyter/minimal-notebook
-# https://hub.docker.com/r/jupyter/minimal-notebook/dockerfile
+# Based on jupyter/scipy-notebook: Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+# https://hub.docker.com/r/jupyter/scipy-notebook/dockerfile
 
 # Ubuntu 18.04 (bionic) from 2019-10-29
 # https://github.com/tianon/docker-brew-ubuntu-core/blob/dist-amd64/bionic/Dockerfile
@@ -39,6 +40,7 @@ RUN conda install --quiet --yes \
     'scipy=1.3*' \
     'seaborn=0.9*' \
     'sqlalchemy=1.3*' \
+    'sympy=1.4' \
     'vincent=0.4.*' \
     'xlrd' \
     'pyodbc' \
@@ -56,16 +58,6 @@ RUN conda install --quiet --yes \
     rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
     rm -rf /home/$NB_USER/.cache/yarn && \
     rm -rf /home/$NB_USER/.node-gyp && \
-    fix-permissions.sh $CONDA_DIR && \
-    fix-permissions.sh /home/$NB_USER
-
-# Install facets which does not have a pip or conda package at the moment
-RUN cd /tmp && \
-    git clone https://github.com/PAIR-code/facets.git && \
-    cd facets && \
-    jupyter nbextension install facets-dist/ --sys-prefix && \
-    cd && \
-    rm -rf /tmp/facets && \
     fix-permissions.sh $CONDA_DIR && \
     fix-permissions.sh /home/$NB_USER
 

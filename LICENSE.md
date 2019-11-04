@@ -5,7 +5,6 @@ This project is licensed under the terms of the Modified BSD License
 
 - Copyright (c) 2001-2015, IPython Development Team
 - Copyright (c) 2015, Jupyter Development Team
-- Copyright (c) 2019 cjadeveloper
 
 All rights reserved.
 
@@ -39,8 +38,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 The Jupyter Development Team is the set of all contributors to the Jupyter project.
 This includes all of the Jupyter subprojects.
 
-The core team that coordinates development on GitHub can be found here:
-https://github.com/jupyter/.
+The core team that coordinates development on GitHub can be found [here](https://github.com/jupyter/)
 
 ## Jupyter Copyright Policy
 
