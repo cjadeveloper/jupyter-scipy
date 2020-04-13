@@ -33,8 +33,8 @@ docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/johndoe/w
 
 ### Windows Container: Env vars with "%var%"
 
-```bash
-docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "%USERPROFILE%":/home/johndoe/work cjadeveloper/jupyter-scipy
+```console
+docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "%CD%":/home/johndoe/work cjadeveloper/jupyter-scipy
 ```
 
 > Basado en [Docker Jupyter Stack](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
